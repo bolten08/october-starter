@@ -1,0 +1,28 @@
+@mixin aspect-ratio($width, $height) {
+
+    &:before {
+        display: block;
+        content: '';
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+
+    & > .aspect-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+$small: 820px;
+
+@mixin respond-to($media) {
+    @if $media == mobile {
+        @media only screen and (max-width: $small) {
+            @content;
+        }
+    }
+}

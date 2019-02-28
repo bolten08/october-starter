@@ -1,0 +1,10 @@
+/* Lib styles */
+@import '~normalize.css/normalize.css';
+
+/* Defaults */
+@import './defaults/fonts';
+@import './defaults/defaults';
+
+/* Partials */
+@import './partials/header';
+@import './partials/footer';
